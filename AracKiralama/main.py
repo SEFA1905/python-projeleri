@@ -1,18 +1,12 @@
-from classes import deneme
+from classes.Fonksiyonlar import *
 
-
-print("""
-******** Arac Kirala ********
-        A-Araba
-        B-Bisiklet
-        Q-Cikis 
-""")
 while True:
-    try:
-        secim=input("Ne Tur Araba Kiralayacaksınız:")
-        if (secim=='a')or (secim=='A')or (secim=='b')or (secim=='B')or (secim=='q')or (secim=='Q'):
-            break
-        else:
-            print("Lutfen 'A','B','Q' den Birini Seciniz")
-    except ValueError:
-        print("Lutfen Geçerli Bir Secim Yapınız")
+    ana_menu()
+    secim = AnaMenuSecim()
+    if secim == 'q' or secim == 'Q':
+        print("Cikis Yapiliyor...")
+        break
+    elif secim == 'a' or secim == 'A':
+        menu(secim)
+    elif secim == 'b' or secim == 'B':
+        menu(secim)
